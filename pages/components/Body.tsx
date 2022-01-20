@@ -108,6 +108,7 @@ const Body = ({ search }: any) => {
                       <a
                         onClick={() => infoModal(e)}
                         className="
+                        cursor-pointer
                              inline-block
                              py-2
                              px-7
