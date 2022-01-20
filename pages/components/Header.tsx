@@ -17,19 +17,6 @@ const Header = ({ setSearch }: any) => {
       console.log(err)
     }
   }
-  const getHomePage = async () => {
-    try {
-      await ytApi
-        .get("/playlistItems", {
-          params: {
-            playlistId: "PLogA9DP2_vSekxHP73PXaKD6nbOK56CJw",
-          },
-        })
-        .then((res) => setSearch(res.data))
-    } catch (err) {
-      console.log(err)
-    }
-  }
   const getAll = async () => {
     try {
       await ytApi
@@ -56,9 +43,6 @@ const Header = ({ setSearch }: any) => {
       console.log(err)
     }
   }
-  React.useEffect(() => {
-    getHomePage()
-  }, [])
   return (
     <nav className="bg-orange-100 flex items-center justify-between flex-wrap bg-teal p-6">
       <div className="block lg:hidden"></div>

@@ -2,7 +2,7 @@ import React from "react"
 import { ytApi } from "../../api/youtube"
 
 const Body = ({ search }: any) => {
-  const [showModal, setShowModal] = React.useState(false)
+  const [showModal, setShowModal] = React.useState<boolean>(false)
   const [selectData, setSelectData] = React.useState<any>()
   const infoModal = (e: boolean | ((prevState: boolean) => boolean)) => {
     setShowModal(true)
@@ -15,7 +15,7 @@ const Body = ({ search }: any) => {
     )
   }
   return (
-    <div className=" bg-[#9aeec7]">
+    <div>
       {showModal === true ? (
         <div className="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-800">
           <div className="bg-white rounded-lg w-1/2">
@@ -56,9 +56,8 @@ const Body = ({ search }: any) => {
           </div>
         </div>
       ) : (
-        <section className="flex flex-wrap bg-[#9aeec7]">
+        <section className="flex flex-wrap bg-[#d3d4d4]">
           {search?.items?.map((e: any, i: React.Key | null | undefined) => {
-            console.log(e)
             return (
               <div key={i} className="w-1/3 container">
                 <div className="mt-10 px-4">
