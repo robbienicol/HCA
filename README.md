@@ -14,21 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+OVERVIEW:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+i used TailwindCSS to handling the styling to save some time, and becuase i think its a great way to style efficently. i have the main API where i do an axios request to youtube HCA channel. i limited the results to 5 for simplicity.
 
-## Learn More
+i decided to handle my requests in header.tsx , and set the results to my main results useState. i have a couple buttons that will filter through the API, as well as a search bar that searches within the HCA channel.
 
-To learn more about Next.js, take a look at the following resources:
+body is where i show these results. i am using an iframe for the videos, so you dont have to leave the page to view them. i mapped throught the results to display these containers. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+i have a more info button where you can see further details about the video, as wel las a share button where you can copy the video URL.
